@@ -185,6 +185,41 @@
 .home-btn i {
             font-size: 1.3rem;
         }
+a {
+    text-decoration: none;
+    color: inherit; 
+}
 
 
-  
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.menu-item::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: width 0.3s ease;
+    margin: auto;
+}
+
+.menu-item:hover::after,
+.menu-item.active::after {
+    width: 100%;
+}
+.main-content {
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.main-content img {
+    display: block; 
+    margin: 20px auto; /* Căn giữa ảnh */
+    max-width: 80%; /* Giới hạn chiều rộng ảnh */
+    height: auto; /* Giữ tỉ lệ ảnh */
+}
